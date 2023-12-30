@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-  <head><script src="assets/js/color-modes.js"></script>
+<head>
+    <script src="assets/js/color-modes.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,318 +10,369 @@
     <meta name="generator" content="">
     <title>Abhishek & Kavita Wedding Album</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
-
-
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-
-    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
         }
-      }
 
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
 
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
 
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
 
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
 
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
 
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
 
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
+        .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
 
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8;
+        }
 
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important;
-      }
+        .bd-mode-toggle {
+            z-index: 1500;
+        }
 
-      body {
-        background-image: url('static/bg.jpg');
-        font-family: 'dancing-script'
-      }
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+        }
 
-      @font-face {
-        font-family: 'dancing-script';
-        src: url('static/DancingScript-VariableFont_wght.ttf');
-      }
+        body {
+            background-image: url('static/bg.jpg');
+            font-family: 'dancing-script'
+        }
+
+        @font-face {
+            font-family: 'dancing-script';
+            src: url('static/DancingScript-VariableFont_wght.ttf');
+        }
     </style>
 
-    
-  </head>
-  <body>
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-      <symbol id="check2" viewBox="0 0 16 16">
+
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-      </symbol>
-      <symbol id="circle-half" viewBox="0 0 16 16">
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
         <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-      </symbol>
-      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
         <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
         <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
-      </symbol>
-      <symbol id="sun-fill" viewBox="0 0 16 16">
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
         <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-      </symbol>
-    </svg>
+    </symbol>
+</svg>
 
 
-    
 <header data-bs-theme="dark">
-  <div class="collapse text-bg-dark" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4>Our Wedding Memories</h4>
-          <p class="text-body-secondary">We tied our knot on 2nd December, 2022. Relive the memories.</p>
+    <div class="collapse text-bg-dark" id="navbarHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-md-7 py-4">
+                    <h4>Our Wedding Memories</h4>
+                    <p class="text-body-secondary">We tied our knot on 2nd December, 2022. Relive the memories.</p>
+                </div>
+                <div class="col-sm-4 offset-md-1 py-4">
+                    <h4>Contact</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.youtube.com/channel/UCGiqXnQVPrVMCFD-6_J743Q" class="text-white">Follow
+                            on Youtube</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          <h4>Contact</h4>
-          <ul class="list-unstyled">
-            <li><a href="https://www.youtube.com/channel/UCGiqXnQVPrVMCFD-6_J743Q" class="text-white">Follow on Youtube</a></li>
-          </ul>
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2"
+                     viewBox="0 0 24 24">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                    <circle cx="12" cy="13" r="4"/>
+                </svg>
+                <strong>Abhishek & Kavita Wedding Album</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
+                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </div>
-      </div>
     </div>
-  </div>
-  <div class="navbar navbar-dark bg-dark shadow-sm">
-    <div class="container">
-      <a href="#" class="navbar-brand d-flex align-items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-        <strong>Abhishek & Kavita Wedding Album</strong>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-  </div>
 </header>
 
 <main>
 
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-12 col-md-12 mx-auto">
-        <div class="embed-responsive embed-responsive-21by9">
-          <iframe class="embed-responsive-item" width="850" height="400" src="https://www.youtube.com/embed/y11YlrH_GyY?si=GR7aquacNSqSWNPU&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-12 col-md-12 mx-auto">
+                <div class="embed-responsive embed-responsive-21by9">
+                    <iframe class="embed-responsive-item" width="850" height="400"
+                            src="https://www.youtube.com/embed/y11YlrH_GyY?si=GR7aquacNSqSWNPU&amp;controls=0"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <div class="album py-5 bg-body-tertiary">
+        <div class="container">
+
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 g-2">
+
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" width="90%" height="315"
+                                        src="https://www.youtube.com/embed/_-BrTdF-Yuo?si=9OmRQCoh8gicoWX0&amp;controls=0"
+                                        title="YouTube video player"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                            </div>
+                            <p class="card-text">Bride & Groom Details</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="https://photos.app.goo.gl/uUW3q3ZYJYQeFGhV8" type="button"
+                                       class="btn btn-sm btn-outline-secondary" target="_blank">View Photos</a>
+                                </div>
+                                <small class="text-body-secondary">3 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" width="90%" height="315"
+                                        src="https://www.youtube.com/embed/sIL1COuRdLA?si=Y9Bzy1K0D8Io9q-E&amp;controls=0"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                            </div>
+                            <p class="card-text">Tilak & Engagement</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="https://photos.app.goo.gl/14pEasuZN1pFjG649" type="button"
+                                       class="btn btn-sm btn-outline-secondary" target="_blank">View Photos</a>
+                                </div>
+                                <small class="text-body-secondary">25 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" width="90%" height="315"
+                                        src="https://www.youtube.com/embed/FWDULcaovnQ?si=HFzbu3at2I2E4zj9&amp;controls=0"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </iframe>
+                            </div>
+                            <p class="card-text">Groom's Shagun</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="https://photos.app.goo.gl/1L2HECWLhXhnBvvb6" type="button"
+                                       class="btn btn-sm btn-outline-secondary" target="_blank">View Photos</a>
+                                </div>
+                                <small class="text-body-secondary">35 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" width="90%" height="315"
+                                        src="https://www.youtube.com/embed/z9MQpijcjyo?si=TyyTML7zN6wf5_bm&amp;controls=0"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                            </div>
+                            <p class="card-text">Sangeet Night</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="https://photos.app.goo.gl/1L2HECWLhXhnBvvb6" type="button"
+                                       class="btn btn-sm btn-outline-secondary" target="_blank">View Photos</a>
+                                </div>
+                                <small class="text-body-secondary">80 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" width="90%" height="315"
+                                        src="https://www.youtube.com/embed/FL5vWNpYHVo?si=oSoOSFPE9424MFOZ&amp;controls=0"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                            </div>
+                            <p class="card-text">Groom's Haldi</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="https://photos.app.goo.gl/DDb17fYiWbaonBgeA" type="button"
+                                       class="btn btn-sm btn-outline-secondary" target="_blank">View Photos</a>
+                                </div>
+                                <small class="text-body-secondary">29 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" width="90%" height="315"
+                                        src="https://www.youtube.com/embed/aMdfS1c2hS8?si=MgEN_nZIMN0xPvDB&amp;controls=0"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                            </div>
+                            <p class="card-text">Mehendi & Haldi of Bride</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="https://photos.app.goo.gl/jUyf46ShWLgFe2NK8" type="button"
+                                       class="btn btn-sm btn-outline-secondary" target="_blank">View Photos</a>
+                                </div>
+                                <small class="text-body-secondary">40 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" width="90%" height="315"
+                                        src="https://www.youtube.com/embed/C04Wd93ehRc?si=nX3u2s-eZ0oI202S&amp;controls=0"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                            </div>
+                            <p class="card-text">The big day</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="https://photos.app.goo.gl/Uqk88iZM8A17UBGP7" type="button"
+                                       class="btn btn-sm btn-outline-secondary" target="_blank">View Photos</a>
+                                    <a href="https://photos.app.goo.gl/6XsuoXbKCp8KsjcQ6" type="button"
+                                       class="btn btn-sm btn-outline-secondary" target="_blank">Groom Side Photos</a>
+                                    <a href="https://photos.app.goo.gl/5wjUDBUq177Tfqq98" type="button"
+                                       class="btn btn-sm btn-outline-secondary" target="_blank">Bride Side Photos</a>
+                                </div>
+                                <small class="text-body-secondary">120 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" width="90%" height="315"
+                                        src="https://www.youtube.com/embed/G5CmM-PqAOw?si=x7-oGc7a1bUgyqkd&amp;controls=0"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </iframe>
+                            </div>
+                            <p class="card-text">Reception</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="https://photos.app.goo.gl/W39bCGq3CwHna6V16" type="button"
+                                       class="btn btn-sm btn-outline-secondary" target="_blank">View Photos</a>
+                                </div>
+                                <small class="text-body-secondary">35 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
-
-  <div class="album py-5 bg-body-tertiary">
-    <div class="container">
-
-      <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 g-2">
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" width="90%" height="315" src="https://www.youtube.com/embed/_-BrTdF-Yuo?si=9OmRQCoh8gicoWX0&amp;controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              </div>
-                <p class="card-text">Bride & Groom Details</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a href="https://photos.app.goo.gl/uUW3q3ZYJYQeFGhV8" type="button" class="btn btn-sm btn-outline-secondary" target="_blank">View Photos</a>
-                </div>
-                <small class="text-body-secondary">3 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <div class="embed-responsive embed-responsive-16by9">
-               <iframe class="embed-responsive-item" width="90%" height="315" src="https://www.youtube.com/embed/sIL1COuRdLA?si=Y9Bzy1K0D8Io9q-E&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              </div>
-                <p class="card-text">Tilak & Engagement</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a href="https://photos.app.goo.gl/14pEasuZN1pFjG649" type="button" class="btn btn-sm btn-outline-secondary" target="_blank">View Photos</a>
-                </div>
-                <small class="text-body-secondary">25 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <div class="embed-responsive embed-responsive-16by9">
-               <iframe class="embed-responsive-item" width="90%" height="315" src="https://www.youtube.com/embed/FWDULcaovnQ?si=HFzbu3at2I2E4zj9&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></iframe>
-              </div>
-                <p class="card-text">Groom's Shagun</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a href="https://photos.app.goo.gl/1L2HECWLhXhnBvvb6" type="button" class="btn btn-sm btn-outline-secondary" target="_blank">View Photos</a>
-                </div>
-                <small class="text-body-secondary">35 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <div class="embed-responsive embed-responsive-16by9">
-               <iframe class="embed-responsive-item" width="90%" height="315" src="https://www.youtube.com/embed/z9MQpijcjyo?si=TyyTML7zN6wf5_bm&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              </div>
-                <p class="card-text">Sangeet Night</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a href="https://photos.app.goo.gl/1L2HECWLhXhnBvvb6" type="button" class="btn btn-sm btn-outline-secondary" target="_blank">View Photos</a>
-                </div>
-                <small class="text-body-secondary">80 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" width="90%" height="315" src="https://www.youtube.com/embed/FL5vWNpYHVo?si=oSoOSFPE9424MFOZ&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              </div>
-                <p class="card-text">Groom's Haldi</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a href="https://photos.app.goo.gl/DDb17fYiWbaonBgeA" type="button" class="btn btn-sm btn-outline-secondary" target="_blank">View Photos</a>
-                </div>
-                <small class="text-body-secondary">29 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" width="90%" height="315" src="https://www.youtube.com/embed/aMdfS1c2hS8?si=MgEN_nZIMN0xPvDB&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              </div>
-                <p class="card-text">Mehendi & Haldi of Bride</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a href="https://photos.app.goo.gl/jUyf46ShWLgFe2NK8" type="button" class="btn btn-sm btn-outline-secondary" target="_blank">View Photos</a>
-                </div>
-                <small class="text-body-secondary">40 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-              <div class="card-body">
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" width="90%" height="315" src="https://www.youtube.com/embed/C04Wd93ehRc?si=nX3u2s-eZ0oI202S&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-              <p class="card-text">The big day</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a href="https://photos.app.goo.gl/Uqk88iZM8A17UBGP7" type="button" class="btn btn-sm btn-outline-secondary" target="_blank">View Photos</a>
-                  <a href="https://photos.app.goo.gl/6XsuoXbKCp8KsjcQ6" type="button" class="btn btn-sm btn-outline-secondary" target="_blank">Groom Side Photos</a>
-                  <a href="https://photos.app.goo.gl/5wjUDBUq177Tfqq98" type="button" class="btn btn-sm btn-outline-secondary" target="_blank">Bride Side Photos</a>
-                </div>
-                <small class="text-body-secondary">120 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-              <div class="card-body">
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" width="90%" height="315" src="https://www.youtube.com/embed/G5CmM-PqAOw?si=x7-oGc7a1bUgyqkd&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></iframe>
-                </div>
-              <p class="card-text">Reception</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a href="https://photos.app.goo.gl/W39bCGq3CwHna6V16" type="button" class="btn btn-sm btn-outline-secondary" target="_blank">View Photos</a>
-                </div>
-                <small class="text-body-secondary">35 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
 </main>
 
 <footer class="text-body-secondary py-5">
-  <div class="container">
+    <div class="container">
 
-  </div>
+    </div>
 </footer>
-<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-
-    </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+  
+</body>
 </html>
